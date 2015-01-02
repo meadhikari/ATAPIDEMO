@@ -21,11 +21,8 @@ namespace TAPITEST101
 
         }
 
-        public static String makeRqeusest(String url, String message)
+        public static String makeRqeusest(String url, String post_data)
         {
-            // this is what we are sending
-            string post_data = message;
-
             // this is where we will send it
             string uri = url;
 
