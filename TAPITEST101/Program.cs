@@ -47,10 +47,10 @@ namespace TAPITEST101
             requestStream.Write(postBytes, 0, postBytes.Length);
             requestStream.Close();
 
-            // grab te response and print it out to the console along with the status code
+            // grab the response and return
             System.Net.HttpWebResponse response = (System.Net.HttpWebResponse)request.GetResponse();
-            Console.WriteLine(new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd());
-            return response.ToString();
+            String result = new System.IO.StreamReader(response.GetResponseStream()).ReadToEnd();
+            return result;
         }
             
     }
